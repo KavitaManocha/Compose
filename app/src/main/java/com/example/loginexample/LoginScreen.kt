@@ -79,7 +79,8 @@ fun Login(context: Context, navController: NavController) {
 
             OutlinedButton(
                 onClick = { logged(email, password, context)
-                    navController.navigate(route = Screen.WelcomeScreen.passNameAndPswd(name = "Kavita", password = "123456"))},
+                    navController.navigate(route = Screen.WelcomeScreen.passNameAndPswd(name = email, password = password))
+                          },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp)
